@@ -32,3 +32,5 @@
 [2023-11-27T13:57:14.302-0800] {network.py:868} DEBUG - remaining request timeout: N/A ms, retry cnt: 1
 [2023-11-27T13:57:14.302-0800] {network.py:850} DEBUG - Request guid: 8d21730d-8b8c-424c-94a0-411164dba37c
 [2023-11-27T13:57:14.302-0800] {network.py:1058} DEBUG - socket timeout: 10
+[2023-11-27T14:05:39.614-0800] {local_task_job_runner.py:228} INFO - Task exited with return code -2
+[2023-11-27T14:05:39.628-0800] {taskinstance.py:2778} INFO - 0 downstream tasks scheduled from follow-on schedule check
