@@ -1,0 +1,13 @@
+[2023-11-27T13:57:07.384-0800] {manager.py:487} INFO - Processing files using up to 1 processes at a time 
+[2023-11-27T13:57:07.385-0800] {manager.py:488} INFO - Process each file at most once every 30 seconds
+[2023-11-27T13:57:07.385-0800] {manager.py:489} INFO - Checking for new files in /Users/myusername/Code/airflow_snowflake_test/dags every 300 seconds
+[2023-11-27T13:57:07.385-0800] {manager.py:755} INFO - Searching for files in /Users/myusername/Code/airflow_snowflake_test/dags
+[2023-11-27T13:57:07.385-0800] {manager.py:758} INFO - There are 1 files in /Users/myusername/Code/airflow_snowflake_test/dags
+[2023-11-27T13:57:08.117-0800] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                                 PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/Users/myusername/Code/airflow_snowflake_test/dags/snowflake_test_dag.py                           1           0  0.63s           2023-11-27T21:57:08
+================================================================================

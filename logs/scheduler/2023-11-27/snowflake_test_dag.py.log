@@ -1,0 +1,7 @@
+[2023-11-27T13:57:07.927-0800] {processor.py:157} INFO - Started process (PID=77194) to work on /Users/myusername/Code/airflow_snowflake_test/dags/snowflake_test_dag.py
+[2023-11-27T13:57:07.929-0800] {processor.py:829} INFO - Processing file /Users/myusername/Code/airflow_snowflake_test/dags/snowflake_test_dag.py for tasks to queue
+[2023-11-27T13:57:07.929-0800] {logging_mixin.py:154} INFO - [2023-11-27T13:57:07.929-0800] {dagbag.py:536} INFO - Filling up the DagBag from /Users/myusername/Code/airflow_snowflake_test/dags/snowflake_test_dag.py
+[2023-11-27T13:57:07.947-0800] {processor.py:839} INFO - DAG(s) dict_keys(['snowflake_test_dag']) retrieved from /Users/myusername/Code/airflow_snowflake_test/dags/snowflake_test_dag.py
+[2023-11-27T13:57:07.974-0800] {logging_mixin.py:154} INFO - [2023-11-27T13:57:07.974-0800] {dag.py:2941} INFO - Sync 1 DAGs
+[2023-11-27T13:57:08.009-0800] {logging_mixin.py:154} INFO - [2023-11-27T13:57:08.009-0800] {dag.py:3722} INFO - Setting next_dagrun for snowflake_test_dag to 2023-01-01T08:00:00+00:00, run_after=2023-01-01T08:01:00+00:00
+[2023-11-27T13:57:08.017-0800] {processor.py:179} INFO - Processing /Users/myusername/Code/airflow_snowflake_test/dags/snowflake_test_dag.py took 0.090 seconds

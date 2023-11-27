@@ -1,0 +1,34 @@
+[2023-11-27T13:57:14.016-0800] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: snowflake_test_dag.query_task scheduled__2023-01-01T08:00:00+00:00 [queued]>
+[2023-11-27T13:57:14.019-0800] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: snowflake_test_dag.query_task scheduled__2023-01-01T08:00:00+00:00 [queued]>
+[2023-11-27T13:57:14.020-0800] {taskinstance.py:1361} INFO - Starting attempt 1 of 1
+[2023-11-27T13:57:14.025-0800] {taskinstance.py:1382} INFO - Executing <Task(SQLExecuteQueryOperator): query_task> on 2023-01-01 08:00:00+00:00
+[2023-11-27T13:57:14.028-0800] {standard_task_runner.py:57} INFO - Started process 77198 to run task
+[2023-11-27T13:57:14.031-0800] {standard_task_runner.py:84} INFO - Running: ['airflow', 'tasks', 'run', 'snowflake_test_dag', 'query_task', 'scheduled__2023-01-01T08:00:00+00:00', '--job-id', '3', '--raw', '--subdir', 'DAGS_FOLDER/snowflake_test_dag.py', '--cfg-path', '/var/folders/4h/ky5v9j0j3czcylp1rpl430mr0000gp/T/tmpfwpt_cnq']
+[2023-11-27T13:57:14.033-0800] {standard_task_runner.py:85} INFO - Job 3: Subtask query_task
+[2023-11-27T13:57:14.052-0800] {task_command.py:416} INFO - Running <TaskInstance: snowflake_test_dag.query_task scheduled__2023-01-01T08:00:00+00:00 [running]> on host kache-j6j9fxyf3l.carro.ts.net
+[2023-11-27T13:57:14.074-0800] {taskinstance.py:1662} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='snowflake_test_dag' AIRFLOW_CTX_TASK_ID='query_task' AIRFLOW_CTX_EXECUTION_DATE='2023-01-01T08:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2023-01-01T08:00:00+00:00'
+[2023-11-27T13:57:14.075-0800] {sql.py:274} INFO - Executing: SELECT 1, 'a'
+[2023-11-27T13:57:14.075-0800] {crypto.py:82} WARNING - empty cryptography key - values will not be stored encrypted.
+[2023-11-27T13:57:14.076-0800] {base.py:73} INFO - Using connection ID 'snowflake' for task execution.
+[2023-11-27T13:57:14.140-0800] {ssl_wrap_socket.py:44} DEBUG - Injecting ssl_wrap_socket_with_ocsp
+[2023-11-27T13:57:14.140-0800] {_auth.py:91} DEBUG - cache directory: /Users/myusername/Library/Caches/Snowflake
+[2023-11-27T13:57:14.150-0800] {cursor.py:87} DEBUG - Failed to import pyarrow. Cannot use pandas fetch API
+[2023-11-27T13:57:14.162-0800] {snowflake.py:378} DEBUG - Executing following statements against Snowflake DB: ["SELECT 1, 'a'"]
+[2023-11-27T13:57:14.163-0800] {base.py:73} INFO - Using connection ID 'snowflake' for task execution.
+[2023-11-27T13:57:14.230-0800] {connection.py:346} INFO - Snowflake Connector for Python Version: 3.5.0, Python Version: 3.11.5, Platform: macOS-13.5.2-arm64-arm-64bit
+[2023-11-27T13:57:14.231-0800] {connection.py:640} DEBUG - connect
+[2023-11-27T13:57:14.231-0800] {connection.py:988} DEBUG - __config
+[2023-11-27T13:57:14.231-0800] {connection.py:1138} INFO - This connection is in OCSP Fail Open Mode. TLS Certificates would be checked for validity and revocation status. Any other Certificate Revocation related exceptions or OCSP Responder failures would be disregarded in favor of connectivity.
+[2023-11-27T13:57:14.232-0800] {converter.py:146} DEBUG - use_numpy: False
+[2023-11-27T13:57:14.232-0800] {connection.py:846} DEBUG - REST API object was created: subdomain.snowflakecomputing.com:443
+[2023-11-27T13:57:14.296-0800] {keypair.py:174} DEBUG - Public key fingerprint is SHA256:M46VXPJwlrzadJgtTsS5Mq7dAGAppjEk2MMI+w1Z8Sw=
+[2023-11-27T13:57:14.300-0800] {_auth.py:174} DEBUG - authenticate
+[2023-11-27T13:57:14.300-0800] {_auth.py:208} DEBUG - assertion content: <bound method AuthByKeyPair.assertion_content of <snowflake.connector.auth.keypair.AuthByKeyPair object at 0x116039e90>>
+[2023-11-27T13:57:14.301-0800] {_auth.py:211} DEBUG - account=subdomain, user=MYUSERNAME, database=, schema=KACHEDATA/ANALYSTS, warehouse=DEVELOPER_WH, role=SUBDOMAIN_DEVELOPER_ROLE, request_id=94cfad41-8ccc-4869-ad93-e46eedb78ec5
+[2023-11-27T13:57:14.301-0800] {_auth.py:244} DEBUG - body['data']: {'CLIENT_APP_ID': 'PythonConnector', 'CLIENT_APP_VERSION': '3.5.0', 'SVN_REVISION': None, 'ACCOUNT_NAME': 'subdomain', 'LOGIN_NAME': 'myusername', 'CLIENT_ENVIRONMENT': {'APPLICATION': 'AIRFLOW', 'OS': 'Darwin', 'OS_VERSION': 'macOS-13.5.2-arm64-arm-64bit', 'PYTHON_VERSION': '3.11.5', 'PYTHON_RUNTIME': 'CPython', 'PYTHON_COMPILER': 'Clang 14.0.3 (clang-1403.0.22.14.1)', 'OCSP_MODE': 'FAIL_OPEN', 'TRACING': 10, 'LOGIN_TIMEOUT': None, 'NETWORK_TIMEOUT': None, 'SOCKET_TIMEOUT': None}, 'AUTHENTICATOR': 'SNOWFLAKE_JWT', 'TOKEN': '***', 'SESSION_PARAMETERS': {'CLIENT_PREFETCH_THREADS': 4}}
+[2023-11-27T13:57:14.301-0800] {retry.py:351} DEBUG - Converted retries value: 1 -> Retry(total=1, connect=None, read=None, redirect=None, status=None)
+[2023-11-27T13:57:14.302-0800] {retry.py:351} DEBUG - Converted retries value: 1 -> Retry(total=1, connect=None, read=None, redirect=None, status=None)
+[2023-11-27T13:57:14.302-0800] {network.py:1217} DEBUG - Session status for SessionPool 'subdomain.snowflakecomputing.com', SessionPool 1/1 active sessions
+[2023-11-27T13:57:14.302-0800] {network.py:868} DEBUG - remaining request timeout: N/A ms, retry cnt: 1
+[2023-11-27T13:57:14.302-0800] {network.py:850} DEBUG - Request guid: 8d21730d-8b8c-424c-94a0-411164dba37c
+[2023-11-27T13:57:14.302-0800] {network.py:1058} DEBUG - socket timeout: 10

@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+if [[ $# -lt 2 ]]; then
+	echo "Run a command with environment variables from a file."
+	echo "Usage: xenv <env_file> <command> [args...]"
+	exit
+fi
+
+set -a && source "$1" && shift && "$@"
