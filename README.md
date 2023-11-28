@@ -6,7 +6,7 @@ Running a docker compose cluster locally seems fine though. A minimal repro:
 # basic setup
 python -m venv .venv
 . .venv/bin/activate
-pip install "apache-airflow[snowflake] == 2.7.3"
+pip install "apache-airflow[snowflake] == 2.7.3" pytest ipython
 
 # for creds & AIRFLOW_HOME
 cp template.env .env
@@ -30,7 +30,7 @@ query_task
 these all succeed as expected:
 
 ```
-scripts/xenv .env python scripts/test_snowflake_connector.py
+scripts/xenv .env pytest
 scripts/xenv .env airflow tasks test snowflake_test_dag query_task
 scripts/xenv .env airflow dags test snowflake_test_dag
 ```

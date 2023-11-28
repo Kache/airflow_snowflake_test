@@ -1,11 +1,15 @@
+import logging
 import os
 from pathlib import Path
+import sys
 from snowflake.connector import SnowflakeConnection
 from cryptography.hazmat.primitives import serialization
 
+logging.basicConfig(level=logging.DEBUG, stream=sys.stdout)
+
 _pkey = Path('~/.ssh/snowflake_key.p8').expanduser()
 
-def main():
+def test_snowflake_connector():
     p_key = serialization.load_pem_private_key(
         _pkey.read_bytes(),
         password=os.environ['SNOWFLAKE_PASSWORD'].encode(),
@@ -34,6 +38,3 @@ def main():
     cursor.execute("SELECT 1, 'a'")
 
     assert list(cursor) == [(1, 'a')]
-
-if __name__ == "__main__":
-    main()

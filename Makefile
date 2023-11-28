@@ -1,6 +1,10 @@
+.PHONY: test
+test: airflow.db
+	scripts/xenv .env pytest
+
 .PHONY: script
 script:
-	scripts/xenv .env python scripts/test_snowflake_connector.py
+	scripts/xenv .env python tests/test_snowflake_connector.py
 
 .PHONY: task
 task: airflow.db

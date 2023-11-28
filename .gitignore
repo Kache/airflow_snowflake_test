@@ -1,5 +1,6 @@
 *.pid
 *.pyc
+.pytest_cache
 
 .venv
 .env
