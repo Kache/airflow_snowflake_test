@@ -8,7 +8,7 @@ script:
 
 .PHONY: task
 task: airflow.db
-	scripts/xenv .env airflow tasks test snowflake_test_dag query_task
+	scripts/xenv .env airflow tasks test snowflake_test_dag auth_task
 
 .PHONY: dag
 dag: airflow.db

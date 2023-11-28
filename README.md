@@ -24,14 +24,14 @@ dag_id             | filepath              | owner   | paused
 snowflake_test_dag | snowflake_test_dag.py | airflow | None
 
 ❯ airflow tasks list snowflake_test_dag
-query_task
+auth_task
 ```
 
 these all succeed as expected:
 
 ```
 scripts/xenv .env pytest
-scripts/xenv .env airflow tasks test snowflake_test_dag query_task
+scripts/xenv .env airflow tasks test snowflake_test_dag auth_task
 scripts/xenv .env airflow dags test snowflake_test_dag
 ```
 
